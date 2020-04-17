@@ -11,7 +11,9 @@ import com.example.jpetstore.dao.SequenceDao;
 import com.example.jpetstore.dao.mybatis.mapper.LineItemMapper;
 import com.example.jpetstore.dao.mybatis.mapper.OrderMapper;
 import com.example.jpetstore.dao.mybatis.mapper.PointMapper;
+import com.example.jpetstore.dao.mybatis.mapper.linePointMapper;
 import com.example.jpetstore.domain.LineItem;
+import com.example.jpetstore.domain.LinePoint;
 import com.example.jpetstore.domain.Order;
 import com.example.jpetstore.domain.PointHistory;
 /*이거추가한거.*/
@@ -37,7 +39,7 @@ public class MybatisPointHistoryDao implements PointHistoryDao {
 	public void insertPointHistory(PointHistory p) throws DataAccessException {
 		// TODO Auto-generated method stub
     	p.setPointId(sequenceDao.getNextId("pointnum"));
-    	pointMapper.insertPointHistory(p);
+    	pointMapper.getPointHistory(p);
     	for (int i = 0; i < p.getLinePoint().size(); i++) {
     		LinePoint linePoint = (LinePoint) p.getLinePoint().get(i);
     		linePoint.setPointId(p.getPointId());

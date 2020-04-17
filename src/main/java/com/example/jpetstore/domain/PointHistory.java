@@ -2,6 +2,7 @@ package com.example.jpetstore.domain;
 
 import java.io.Serializable;
 import java.sql.Date;
+import java.util.List;
 /*이거추가한거.*/
 @SuppressWarnings("serial")
 public class PointHistory implements Serializable  {
@@ -16,8 +17,8 @@ public class PointHistory implements Serializable  {
 	public String getPointId() {
 		return pointId;
 	}
-	public void setPointId(String pointId) {
-		this.pointId = pointId;
+	public void setPointId(String i) {
+		this.pointId = i;
 	}
 	public Date getDate() {
 		return date;
@@ -42,6 +43,10 @@ public class PointHistory implements Serializable  {
 	}
 	public void setHistory(String history) {
 		this.history = history;
+	}
+	public List<PointHistory> getLinePoint() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }

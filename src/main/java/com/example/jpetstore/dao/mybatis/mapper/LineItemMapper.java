@@ -19,6 +19,7 @@ package com.example.jpetstore.dao.mybatis.mapper;
 import java.util.List;
 
 import com.example.jpetstore.domain.LineItem;
+import com.example.jpetstore.domain.PointHistory;
 
 /**
  * @author Eduardo Macarron
@@ -29,5 +30,5 @@ public interface LineItemMapper {
   List<LineItem> getLineItemsByOrderId(int orderId);
 
   void insertLineItem(LineItem lineItem);
-
+  void setPointId(PointHistory pointId);
 }
