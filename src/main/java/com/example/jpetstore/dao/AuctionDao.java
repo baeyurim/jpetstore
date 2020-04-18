@@ -15,7 +15,7 @@ public interface AuctionDao {
 	void deleteAuction(Auction auc) throws DataAccessException;
 	void completeAuction(Auction auc) throws DataAccessException;
 	
-	List<Account> getShareApplierList(String applyerName) throws DataAccessException;
+	List<Account> getAuctionApplierList(String aucId) throws DataAccessException;
 	List<Auction> getAuctionList(String aucId) throws DataAccessException;
 
 }

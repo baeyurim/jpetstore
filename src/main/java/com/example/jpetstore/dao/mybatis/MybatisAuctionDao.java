@@ -52,8 +52,8 @@ public class MybatisAuctionDao implements AuctionDao{
 
 	
 	@Override //경매 지원자들의 list
-	public List<Account> getShareApplierList(String applyerName)throws DataAccessException {
-		return auctionMapper.getShareApplierList(applyerName);
+	public List<Account> getAuctionApplierList(String aucId)throws DataAccessException {
+		return auctionMapper.getAuctionApplierList(aucId);
 	}
 
 	@Override //경매list

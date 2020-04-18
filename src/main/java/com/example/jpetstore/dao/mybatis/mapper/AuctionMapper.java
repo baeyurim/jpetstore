@@ -6,7 +6,7 @@ import com.example.jpetstore.domain.Account;
 import com.example.jpetstore.domain.Auction;
 
 public interface AuctionMapper {
-	List<Account> getShareApplierList(String applyerName);
+	List<Account> getAuctionApplierList(String aucId);
 	List<Auction> getAuctionList(String aucId);
 	
 	Auction getAuctionByAucId(String aucId);
